@@ -964,54 +964,94 @@
 												newsletter to get update information, news and free insight.</div>
 										</div>
 									</div>
-									<div class="elementor-element elementor-element-e5e8244 elementor-button-align-stretch elementor-widget elementor-widget-form"
-										data-id="e5e8244" data-element_type="widget"
-										data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;33&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
-										data-widget_type="form.default">
-										<div class="elementor-widget-container">
-											<form method="post" id="frmSubmit">
-												<div class="elementor-form-fields-wrapper elementor-labels-">
-													<div
-														class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-66 elementor-field-required">
-														<input type="text"
-															class="input elementor-field elementor-size-sm  elementor-field-textual"
-															name="email" placeholder="Email" required="required">
-															<div id="msg"></div>
-													</div>														
-													<div
-														class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-33 e-form__buttons">
-														<button class="elementor-button elementor-size-sm"
-															type="submit">
-															<span class="elementor-button-content-wrapper">
-																<span class="elementor-button-icon">
-																	<i aria-hidden="true"
-																		class="far fa-envelope"></i> Sign Up</span>
-															</span>
-														</button>
-														<div id="msg"></div>
-													</div>
-												</div>
-											</form>
-											<script>
-												jQuery('#frmSubmit').on('submit', function (e) {
-													e.preventDefault();
-													jQuery('#msg').html('Please wait...');
-													jQuery('#btnSubmit').attr('disabled', true);
-													jQuery.ajax({
-														url: 'https://script.google.com/macros/s/AKfycbzhheBNeFJsejwcuF0tU9_7M5_ASs05ZA80vLOin0CxgLAROQZewjDL3NfnwnXCG_gA/exec',
-														type: 'post',
-														data: jQuery('#frmSubmit').serialize(),
-														success: function (result) {
-															jQuery('#frmSubmit')[0].reset();
-															jQuery('#msg').html('Thank You');
-															jQuery('#btnSubmit').attr('disabled', false);
-															//window.location.href='';
-														}
-													});
-												});
-											</script>
+									<div class="elementor-element elementor-element-faa7c74 elementor-button-align-stretch elementor-widget elementor-widget-form"
+							data-id="faa7c74" data-element_type="widget"
+							data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
+							data-widget_type="form.default">
+							<div class="elementor-widget-container">
+								<form method="post" id="contactSubmit">
+									<div class="elementor-form-fields-wrapper elementor-labels-above">
+										<div
+											class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-50">
+											<label for="form-field-name" class="elementor-field-label">
+												Name </label>
+											<input type="text" name="name"
+												class="elementor-field elementor-size-md  elementor-field-textual"
+												placeholder="Name">
+										</div>
+										<div
+											class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_629fcc8 elementor-col-50">
+											<label for="form-field-field_629fcc8" class="elementor-field-label">
+												College/Organisation </label>
+											<input type="text" name="college"
+												class="elementor-field elementor-size-md  elementor-field-textual"
+												placeholder="Company">
+										</div>
+										<div
+											class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-email elementor-col-50 elementor-field-required">
+											<label for="form-field-email" class="elementor-field-label">
+												Phone </label>
+											<input type="tel" name="phone"
+												class="elementor-field elementor-size-md  elementor-field-textual"
+												placeholder="Phone" required="required" aria-required="true">
+
+										</div>
+										<div
+											class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-field_c7e017b elementor-col-50 elementor-field-required">
+											<label for="form-field-field_c7e017b" class="elementor-field-label">
+												Email </label>
+											<input type="email" name="email"
+												class="elementor-field elementor-size-md  elementor-field-textual"
+												placeholder="Email" required="required" aria-required="true">
+										</div>
+										<div
+											class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_d707a6e elementor-col-100 elementor-field-required">
+											<label for="form-field-field_d707a6e" class="elementor-field-label">
+												Subject </label>
+											<input type="text" name="subject"
+												class="elementor-field elementor-size-md  elementor-field-textual"
+												placeholder="Subject" required="required" aria-required="true">
+										</div>
+										<div
+											class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
+											<label for="form-field-message" class="elementor-field-label">
+												Message </label>
+											<textarea class="elementor-field-textual elementor-field  elementor-size-md"
+												name="message" rows="4" placeholder="Message"></textarea>
+										</div>
+										<div id="Cmsg"></div>
+										<div
+											class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+											<button class="elementor-button elementor-size-sm" type="submit">
+												<span class="elementor-button-content-wrapper">
+													<span class="elementor-button-icon">
+														<i aria-hidden="true" class="far fa-envelope"></i> Send
+														Message</span>
+												</span>
+											</button>
 										</div>
 									</div>
+								</form>
+								<script>
+									jQuery('#contactSubmit').on('submit', function (e) {
+										e.preventDefault();
+										jQuery('#Cmsg').html('Please wait...');
+										jQuery('#btn-Submit').attr('disabled', true);
+										jQuery.ajax({
+											url: 'https://script.google.com/macros/s/AKfycbzNxa3iRJiCmaErV_qXlMgVDKy6fGmK2xbdHLeR4CcULo0CJRkCLBgSSq-gg1uY54o/exec',
+											type: 'post',
+											data: jQuery('#contactSubmit').serialize(),
+											success: function (result) {
+												jQuery('#contactSubmit')[0].reset();
+												jQuery('#Cmsg').html('Thank You');
+												jQuery('#btn-Submit').attr('disabled', false);
+												// window.location.href='https://google.com';
+											}
+										});
+									});
+								</script>
+							</div>
+						</div>
 								</div>
 							</div>
 						</div>
