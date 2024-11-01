@@ -1571,74 +1571,94 @@
 								</div>
 							</div>
 							<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-8607664"
-								data-id="8607664" data-element_type="column">
-								<div class="elementor-widget-wrap elementor-element-populated">
-									<div class="elementor-element elementor-element-d82751a elementor-widget elementor-widget-heading"
-										data-id="d82751a" data-element_type="widget"
-										data-widget_type="heading.default">
-										<div class="elementor-widget-container">
-											<h3 class="elementor-heading-title elementor-size-default">Newsletter
-											</h3>
-										</div>
-									</div>
-									<div class="elementor-element elementor-element-524671f elementor-widget elementor-widget-heading"
-										data-id="524671f" data-element_type="widget"
-										data-widget_type="heading.default">
-										<div class="elementor-widget-container">
-											<div class="elementor-heading-title elementor-size-default">Sign up our
-												newsletter to get update information, news and free insight.</div>
-										</div>
-									</div>
-									<div class="elementor-element elementor-element-e5e8244 elementor-button-align-stretch elementor-widget elementor-widget-form"
-										data-id="e5e8244" data-element_type="widget"
-										data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;33&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
-										data-widget_type="form.default">
-										<div class="elementor-widget-container">
-											<form method="post" id="frmSubmit">
-												<div class="elementor-form-fields-wrapper elementor-labels-">
-													<div
-														class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-66 elementor-field-required">
-														<input type="text"
-															class="input elementor-field elementor-size-sm  elementor-field-textual"
-															name="email" placeholder="Email" required="required">
-															<div id="msg"></div>
-													</div>														
-													<div
-														class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-33 e-form__buttons">
-														<button class="elementor-button elementor-size-sm"
-															type="submit">
-															<span class="elementor-button-content-wrapper">
-																<span class="elementor-button-icon">
-																	<i aria-hidden="true"
-																		class="far fa-envelope"></i> Sign Up</span>
-															</span>
-														</button>
-														<div id="msg"></div>
-													</div>
-												</div>
-											</form>
-											<script>
-												jQuery('#frmSubmit').on('submit', function (e) {
-													e.preventDefault();
-													jQuery('#msg').html('Please wait...');
-													jQuery('#btnSubmit').attr('disabled', true);
-													jQuery.ajax({
-														url: 'https://script.google.com/macros/s/AKfycbzhheBNeFJsejwcuF0tU9_7M5_ASs05ZA80vLOin0CxgLAROQZewjDL3NfnwnXCG_gA/exec',
-														type: 'post',
-														data: jQuery('#frmSubmit').serialize(),
-														success: function (result) {
-															jQuery('#frmSubmit')[0].reset();
-															jQuery('#msg').html('Thank You');
-															jQuery('#btnSubmit').attr('disabled', false);
-															//window.location.href='';
-														}
-													});
-												});
-											</script>
-										</div>
-									</div>
-								</div>
-							</div>
+                                    data-id="8607664" data-element_type="column">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-d82751a elementor-widget elementor-widget-heading"
+                                            data-id="d82751a" data-element_type="widget"
+                                            data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h3 class="elementor-heading-title elementor-size-default">Newsletter
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-524671f elementor-widget elementor-widget-heading"
+                                            data-id="524671f" data-element_type="widget"
+                                            data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-heading-title elementor-size-default">Sign up our
+                                                    newsletter to get update information, news and free insight.</div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="elementor-element elementor-element-e5e8244 elementor-button-align-stretch elementor-widget elementor-widget-form"
+                                            data-id="e5e8244" data-element_type="widget"
+                                            data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;33&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
+                                            data-widget_type="form.default">
+                                            <div class="elementor-widget-container">
+                                                <form method="post" id="frmSubmit">
+                                                    <div class="elementor-form-fields-wrapper elementor-labels-">
+                                                        <div
+                                                            class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-66 elementor-field-required">
+                                                            <input type="text"
+                                                                class="input elementor-field elementor-size-sm elementor-field-textual"
+                                                                name="email" placeholder="Email" required="required">
+                                                            <div id="msg"></div>
+                                                        </div>
+                                                        <div
+                                                            class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-33 e-form__buttons">
+                                                            <button class="elementor-button elementor-size-sm"
+                                                                type="submit">
+                                                                <span class="elementor-button-content-wrapper">
+                                                                    <span class="elementor-button-icon">
+                                                                        <i aria-hidden="true"
+                                                                            class="far fa-envelope"></i> Sign Up</span>
+                                                                </span>
+                                                            </button>
+                                                            <div id="msg"></div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <script>
+                                                    jQuery('#frmSubmit').on('submit', function (e) {
+                                                        e.preventDefault();
+
+                                                        // Clear previous messages
+                                                        jQuery('#msg').html('');
+
+                                                        // Email regex pattern for validation
+                                                        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                                                        const emailInput = jQuery('input[name="email"]').val();
+
+                                                        // Check if email is valid
+                                                        if (!emailPattern.test(emailInput)) {
+                                                            jQuery('#msg').html('Please enter a valid email address in the format info@podstechnologysolutions.com.');
+                                                            return; // Stop form submission if email is invalid
+                                                        }
+
+                                                        jQuery('#msg').html('Please wait...');
+                                                        jQuery('#btnSubmit').attr('disabled', true);
+
+                                                        jQuery.ajax({
+                                                            url: 'https://script.google.com/macros/s/AKfycbzhheBNeFJsejwcuF0tU9_7M5_ASs05ZA80vLOin0CxgLAROQZewjDL3NfnwnXCG_gA/exec',
+                                                            type: 'post',
+                                                            data: jQuery('#frmSubmit').serialize(),
+                                                            success: function (result) {
+                                                                jQuery('#frmSubmit')[0].reset();
+                                                                jQuery('#msg').html('Thank You');
+                                                                jQuery('#btnSubmit').attr('disabled', false);
+                                                                //window.location.href=''; // Uncomment if redirect is needed
+                                                            }
+                                                        });
+                                                    });
+                                                </script>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
 						</div>
 					</section>
 					<section
